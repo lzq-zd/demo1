@@ -24,24 +24,28 @@ public class OrderDaoTest {
     @Autowired
     OrderMapper orderMapper;
 
-   // @Test
+    //@Test
     public void testInsertOrder() {
         for (int i = 1; i < 20; i++) {
-            orderMapper.insertOrder(new BigDecimal(i),1L,"success");
+            orderMapper.insertOrder(new BigDecimal(i),4L,"success");
         }
     }
 
-    @Test
+    //@Test
     public void testSelectOrderByIds() {
         List<Long> ids = new ArrayList<>();
         ids.add(628369459580502016L);
         ids.add(628368506596884481L);
         List<Order> maps = orderMapper.selectOrderByIds(ids);
+        if(maps.isEmpty()) {
+            System.out.println("没有数据");
+            return;
+        }
         System.out.println(maps);
     }
 
-    //@Test
+    @Test
     public void testSelectAll() {
-        System.out.println(orderMapper.selectAll());
+        System.out.println(orderMapper.selectAll().size());
     }
 }
