@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "spring.shardingsphere.datasource.db1.driver-class-name",
+      "type": "java.lang.String",
+      "description": "Description for spring.shardingsphere.datasource.db1.driver-class-name."
+    },
+    {
+      "name": "spring.shardingsphere.datasource.db1.password",
+      "type": "java.lang.String",
+      "description": "Description for spring.shardingsphere.datasource.db1.password."
+    }
+  ] }
